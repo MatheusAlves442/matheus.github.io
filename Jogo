@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button {
+      background-color: blue;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clique no botão abaixo:</h1>
+  <button id="btn">Clique aqui</button>
+  <p id="message" style="display: none;">Eu te amo</p>
+  <script>
+    const btn = document.querySelector("#btn");
+    const message = document.querySelector("#message");
+    let count = 0;
+    btn.addEventListener("click", function() {
+      count++;
+      if (count % 2 === 0) {
+        btn.style.backgroundColor = "red";
+      } else {
+        btn.style.backgroundColor = "blue";
+      }
+      if (count === 10) {
+        message.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
